@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <style>
+      body {
+        background: linear-gradient(45deg, #667eea, #667eea);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        background: linear-gradient(45deg, #3f2aac, #3f2aac);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      h2 {
+        text-align: center;
+        color: #000000;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-weight: bold;
+        color: #000000;
+      }
+
+      input[type="text"],
+      input[type="date"],
+      input[type="tel"],
+      input[type="email"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #7185c7; /* Added background color */
+        color: #000000; /* Added text color */
+      }
+
+      textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #7185c7; /* Added background color */
+        color: #000000; /* Added text color */
+      }
+
+      input[type="submit"] {
+        background: #2196f3;
+        color: #000000;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      input[type="submit"]:hover {
+        background: #008cff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration Form</h2>
+
+      <form
+        action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+        method="POST"
+      >
+        <input type="hidden" name="orgid" value="00D2w00000RrzIh" />
+        <input type="hidden" name="retURL" value="http://" />
+
+        <label for="name">Contact Name:</label>
+        <input
+          id="name"
+          maxlength="80"
+          name="name"
+          size="20"
+          type="text"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          id="email"
+          maxlength="80"
+          name="email"
+          size="20"
+          type="text"
+          required
+        />
+
+        <label for="phone">Phone:</label>
+        <input id="phone" maxlength="40" name="phone" size="20" type="text" />
+
+        <label for="subject">Subject:</label>
+        <input
+          id="subject"
+          maxlength="80"
+          name="subject"
+          size="20"
+          type="text"
+        />
+
+        <label for="description">Description:</label>
+        <textarea
+          name="description"
+          style="background-color: #7185c7; color: #000000"
+        ></textarea>
+
+        <input type="submit" name="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
